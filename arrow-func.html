@@ -1,1 +1,72 @@
-<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">    <title>函数的扩展用法：默认值，箭头函数，箭头函数this作用域</title></head><body><script>    function add(a,b) {        a = a || 6;        b = b || 10;        console.log(a + b);    	return a+b;    }    add();    add(1,2);    function add1(a=6,b=10) {	    console.log(a + b);	    return a+b;    }    add1();    add1(3);    //箭头函数写法 --单行和多行的写法    const add2 = (a = 6,b = 10) => a+b;    console.log(add2());    const add3 = (a=6, b=10) => {    	console.log(a+b);    	return a+b;    }    //箭头函数 this 作用域    window.a = 10;    const obj = {    	a : 5,        func1 : function () {          console.log(this.a);        },        func2:() => {    		console.log(this);    		console.log(this.a)        },        func : function () {          /*setTimeout(function () {            this.func1();    //报错          },1000);*/          setTimeout(()=>{this.func1();}, 1000);        }    };    obj.func();    obj.func2();    //注意const 和 var window全局变量的差异    var b = 100;    console.log(b);    console.log(window.b);    const c = 1000;    console.log(c);    console.log("window.c="+window.c)</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数的扩展用法：默认值，箭头函数，箭头函数this作用域</title>
+</head>
+<body>
+
+<script>
+    function add(a,b) {
+        a = a || 6;
+        b = b || 10;
+        console.log(a + b);
+    	return a+b;
+    }
+    add();
+    add(1,2);
+
+
+    function add1(a=6,b=10) {
+	    console.log(a + b);
+	    return a+b;
+    }
+    add1();
+    add1(3);
+
+
+    //箭头函数写法 --单行和多行的写法
+    const add2 = (a = 6,b = 10) => a+b;
+    console.log(add2());
+
+    const add3 = (a=6, b=10) => {
+    	console.log(a+b);
+    	return a+b;
+    }
+
+
+    //箭头函数 this 作用域
+    window.a = 10;
+    const obj = {
+    	a : 5,
+        func1 : function () {
+          console.log(this.a);
+        },
+        func2:() => {
+    		console.log(this);
+    		console.log(this.a)
+        },
+        func : function () {
+          /*setTimeout(function () {
+            this.func1();    //报错
+          },1000);*/
+          setTimeout(()=>{this.func1();}, 1000);
+        }
+    };
+    obj.func();
+    obj.func2();
+
+
+    //注意const 和 var window全局变量的差异
+    var b = 100;
+    console.log(b);
+    console.log(window.b);
+
+    const c = 10010;
+    console.log(c);
+    console.log("window.c="+window.c)
+
+
+</script>
+</body>
+</html>
