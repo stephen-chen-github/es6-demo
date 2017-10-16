@@ -1,1 +1,42 @@
-<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">    <title>let和const用法</title></head><body><script>    //let用法 块作用域， var 函数作用域    for (let i = 0; i < 10 ; i++) {    	console.log(i);    }    console.log(i); //会出错    if (1) {    	let a = 5;    	console.log(a);    }    console.log("a="+a);    //const 用法：普通类型和对象类型的区别    const PI = 3.14;    PI = 3.1415;    //赋值会报错；    const person = {    	age:10    };    console.log("age="+person.age);    person.age = 20;    console.log("age="+person.age);    person = {    	age:30;    }    console.log(person);    //会报错</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>let和const用法</title>
+</head>
+<body>
+<script>
+    //let用法 块作用域， var 函数作用域
+    for (let i = 0; i < 10 ; i++) {
+    	console.log(i);
+    }
+    console.log(i); //会出错
+
+    if (1) {
+    	let a = 5;
+    	console.log(a);
+    }
+    console.log("a="+a);
+
+
+
+    //const 用法：普通类型和对象类型的区别
+    const PI = 3.14;
+    PI = 3.1415;    //赋值会报错；
+
+    const person = {
+    	age:10
+    };
+    console.log("age="+person.age);
+
+    person.age = 20;
+    console.log("age="+person.age);
+
+    person = {
+    	age:30;
+    }
+    console.log(person);    //会报错
+  
+</script>
+</body>
+</html>
