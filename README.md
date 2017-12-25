@@ -9,3 +9,9 @@
 携程UED http://ued.ctrip.com/
 
 奇舞360 https://t.75team.com/video
+
+淘宝FED http://taobaofed.org/
+
+百度FEX  http://fex.baidu.com/
+
+百度EUX  http://eux.baidu.com/
