@@ -33,3 +33,6 @@ jsbin   http://jsbin.com   和github帐号同步
 4、js模版实现机制；
 
 
+git工具
+
+http://www.chengfeilong.com/tips-for-Git-users
