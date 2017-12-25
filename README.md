@@ -20,3 +20,16 @@
 前端demo工具 
 
 jsbin   http://jsbin.com   和github帐号同步
+
+
+计划demo
+
+1、rem移动适配用法demo；
+
+2、自定义事件作用createEvent initEvent dispatchEvent
+
+3、jsonp的实现机制；
+
+4、js模版实现机制；
+
+
